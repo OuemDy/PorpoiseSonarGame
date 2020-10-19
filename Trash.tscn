@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sprites/trash2.png" type="Texture" id=1]
+[ext_resource path="res://sprites/trash1.png" type="Texture" id=2]
+[ext_resource path="res://Trash.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "trash",
+"speed": 1.25
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 54.037
+
+[node name="Trash" type="RigidBody2D"]
+position = Vector2( 574.639, 276.208 )
+scale = Vector2( 1.5, 1.5 )
+collision_layer = 0
+gravity_scale = 0.0
+script = ExtResource( 3 )
+speed_min = 150
+speed_max = 150
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -5.02701, 12.9915 )
+scale = Vector2( 1.5, 1.5 )
+frames = SubResource( 1 )
+animation = "trash"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.7038, 3.08508 )
+scale = Vector2( 1.5, 1.5 )
+shape = SubResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -3.20798, 5.90134 )
+scale = Vector2( 1.5, 1.5 )
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
