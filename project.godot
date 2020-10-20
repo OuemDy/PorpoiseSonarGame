@@ -15,7 +15,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Porpoise Tamagotchi"
+config/name="A Porpoise Purpose"
+run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
 [rendering]

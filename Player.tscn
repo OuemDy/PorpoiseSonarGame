@@ -22,11 +22,12 @@ height = 176.777
 position = Vector2( 170.23, 303.432 )
 scale = Vector2( 0.604803, 0.604803 )
 script = ExtResource( 5 )
-Velocidad = 400
+Speed = 400
 
 [node name="Sprite_player" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "swimming"
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
