@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tristan_lohengrin_happy.ogg-6ad1fe546d26f64e49df61408d465d10.oggstr"
+
+[deps]
+
+source_file="res://sounds/tristan_lohengrin_happy.ogg"
+dest_files=[ "res://.import/tristan_lohengrin_happy.ogg-6ad1fe546d26f64e49df61408d465d10.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -6,17 +6,23 @@ var Score
 func _ready():
 	randomize()
 	
+	
 func new_game():
 	Score = 0
 	$Player.start($StartPosition.position) # load start position for player
+	$press_button.play()
 	$StartTimer.start()
 	$Interface.show_message("Ready?")
 	$Interface.update_score(Score)
+	$background_music.play()
 
 func game_over(): # Conected to hit signal
 	$ScoreTimer.stop()
 	$TrashTimer.stop()
 	$Interface.game_over()
+	$game_over_sound.play()
+	$background_music.stop()
+	
 
 func _on_StartTimer_timeout():
 	$TrashTimer.start()
